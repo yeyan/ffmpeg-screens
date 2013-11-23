@@ -1,0 +1,10 @@
+import os
+
+CC = 'clang'
+CXX = 'clang++'
+LIBS= ['avformat', 'avcodec', 'swscale', 'avutil', 'cairo', 'boost_filesystem', 'boost_system', 'boost_program_options']
+
+LIBPATH = ['/usr/lib', '/usr/local/lib']
+
+env = Environment(CC = CC, CXX = CXX, LIBS = LIBS, LIBPATH = LIBPATH);
+env.Program('main', ['main.cpp'])
